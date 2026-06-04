@@ -1,0 +1,427 @@
+/*
+========================================================
+PROYECTO: NEXUS SPORT AGENCY
+DESARROLLADO POR: Jacob Santiago Febres
+ARCHIVO: style.css
+========================================================
+*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Montserrat', sans-serif;
+  background:#050505;
+  color:white;
+  overflow-x:hidden;
+  font-size:16px;
+}
+
+a{
+  text-decoration:none;
+  color:white;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+/* HEADER / NAVBAR */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  z-index:999;
+  padding:15px 8%;
+  background:rgba(0,0,0,0.70);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:clamp(1rem, 2vw, 1.8rem);
+  font-weight:900;
+  color:#c9a44c;
+  text-transform:uppercase;
+  letter-spacing:clamp(1px, .3vw, 3px);
+  font-family:'Montserrat', sans-serif;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+}
+
+.nav-links a{
+  font-weight:700;
+  font-size:clamp(.85rem, 1vw, 1rem);
+  text-transform:uppercase;
+  transition:.3s;
+}
+
+.nav-links a:hover{
+  color:#c9a44c;
+}
+
+/* HERO PRINCIPAL */
+.hero{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.80)),
+  url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2000');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:120px 5%;
+}
+
+.hero-content{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+
+.hero-logo{
+  width:clamp(160px, 20vw, 250px);
+  max-width:100%;
+  margin:0 auto 35px auto;
+  display:block;
+  border-radius:20px;
+  box-shadow:0 0 25px rgba(201,164,76,.15);
+}
+
+.hero h1{
+  font-size:clamp(3rem, 7vw, 6rem);
+  line-height:1.1;
+  text-transform:uppercase;
+  margin-bottom:20px;
+  color:#c9a44c;
+}
+
+.hero p{
+  font-size:clamp(1.1rem, 2vw, 1.8rem);
+  line-height:1.8;
+  color:#ffffff;
+  max-width:1000px;
+  margin:0 auto 35px auto;
+  font-weight:500;
+  text-shadow:0 2px 10px rgba(0,0,0,.8);
+}
+
+/* BOTONES */
+.btn{
+  display:inline-block;
+  padding:clamp(15px, 2vw, 22px) clamp(38px, 5vw, 60px);
+  font-size:clamp(1rem, 1.5vw, 1.35rem);
+  background:#c9a44c;
+  color:black;
+  border-radius:50px;
+  font-weight:900;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 25px rgba(201,164,76,.8);
+}
+
+/* SECCIONES */
+section{
+  padding:clamp(80px, 8vw, 120px) 8%;
+}
+
+.section-title{
+  font-size:clamp(2.3rem, 5vw, 4rem);
+  margin-bottom:60px;
+  text-transform:uppercase;
+  position:relative;
+}
+
+.section-title::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:80px;
+  height:5px;
+  background:#c9a44c;
+}
+
+/* SOBRE NOSOTROS */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.about img{
+  border-radius:20px;
+  border:1px solid rgba(201,164,76,.4);
+}
+
+.about-text p{
+  font-size:clamp(1.05rem, 1.4vw, 1.35rem);
+  line-height:2;
+  color:#cccccc;
+  margin-bottom:20px;
+}
+
+/* MISIÓN Y VISIÓN */
+.mission-vision{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+.info-box{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:.3s;
+}
+
+.info-box:hover{
+  transform:translateY(-10px);
+  border-color:#c9a44c;
+}
+
+.info-box h3{
+  color:#c9a44c;
+  font-size:clamp(1.6rem, 2.5vw, 2rem);
+  margin-bottom:20px;
+  text-transform:uppercase;
+}
+
+.info-box p{
+  color:#cccccc;
+  font-size:clamp(1.05rem, 1.3vw, 1.3rem);
+  line-height:1.9;
+}
+
+/* MENSAJE DEL CEO */
+.ceo-section{
+  background:
+  linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.88)),
+  url('nexus-icon.JPG');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center right;
+}
+
+.ceo-message{
+  max-width:950px;
+  background:rgba(17,17,17,.93);
+  padding:clamp(30px, 5vw, 50px);
+  border-radius:20px;
+  border-left:6px solid #c9a44c;
+}
+
+.ceo-message p{
+  color:#cccccc;
+  font-size:clamp(1.05rem, 1.3vw, 1.3rem);
+  line-height:2;
+  margin-bottom:20px;
+}
+
+.ceo-signature{
+  color:#c9a44c !important;
+  font-weight:800;
+}
+
+/* DEPORTES */
+.sports-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.sport-card{
+  background:#111;
+  padding:30px 20px;
+  border-radius:15px;
+  text-align:center;
+  font-weight:800;
+  font-size:clamp(1rem, 1.2vw, 1.25rem);
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.sport-card:hover{
+  background:#c9a44c;
+  color:black;
+  transform:translateY(-8px);
+}
+
+/* ATLETAS */
+.athletes-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.athlete-card{
+  background:#111;
+  border-radius:20px;
+  overflow:hidden;
+  transition:.4s;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.athlete-card:hover{
+  transform:translateY(-10px);
+  border-color:#c9a44c;
+}
+
+.athlete-card img{
+  height:350px;
+  object-fit:cover;
+}
+
+.athlete-info{
+  padding:20px;
+}
+
+.athlete-info h3{
+  margin-bottom:10px;
+  font-size:clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.athlete-info p{
+  color:#c9a44c;
+  font-weight:600;
+  font-size:clamp(1rem, 1.2vw, 1.2rem);
+}
+
+/* SERVICIOS */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.service-box{
+  background:#111;
+  padding:40px;
+  border-radius:20px;
+  transition:.3s;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.service-box:hover{
+  background:#c9a44c;
+  color:black;
+  transform:translateY(-10px);
+}
+
+.service-box h3{
+  margin-bottom:20px;
+  font-size:clamp(1.5rem, 2vw, 1.9rem);
+}
+
+.service-box p{
+  font-size:clamp(1.05rem, 1.25vw, 1.25rem);
+  line-height:1.8;
+}
+
+/* CONTACTO */
+.contact-form{
+  max-width:750px;
+  margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:20px;
+  margin-bottom:20px;
+  border:none;
+  border-radius:10px;
+  background:#111;
+  color:white;
+  font-size:clamp(1rem, 1.2vw, 1.2rem);
+  outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border:1px solid #c9a44c;
+}
+
+.contact-form textarea{
+  resize:none;
+}
+
+.contact-form button{
+  border:none;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  padding:50px 8%;
+  text-align:center;
+  color:#888;
+}
+
+.footer-logo{
+  width:180px;
+  margin:0 auto 25px;
+  border-radius:6px;
+}
+
+footer p{
+  margin-bottom:10px;
+  font-size:clamp(.95rem, 1.1vw, 1.1rem);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  header{
+    padding:15px 5%;
+  }
+
+  .nav-links{
+    display:none;
+  }
+
+  .hero{
+    padding:120px 5% 70px;
+    background-position:center;
+  }
+
+  section{
+    padding:90px 5%;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .ceo-section{
+    background-position:center;
+  }
+}
